@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb://ashudeo:ashudeo4@ds161397.mlab.com:61397/mern",
+  "jwtSecret": "mysecrettoken"
+}
