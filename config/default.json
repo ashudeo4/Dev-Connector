@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb://ashudeo:ashudeo4@ds161397.mlab.com:61397/mern",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "e0f64333ab2963c1a04d",
+  "githubSecret": "030639c7da73e5fd272f6a0dab173faadc0fb578"
 }
