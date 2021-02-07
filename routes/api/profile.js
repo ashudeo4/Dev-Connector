@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require("../../middleware/auth");
 const Profile = require("../../model/Profile");
 const User = require("../../model/User");
+const Post = require("../../model/Post");
 const { check, validationResult } = require("express-validator");
 const { compareSync } = require("bcryptjs");
 const { remove } = require("../../model/User");
@@ -122,6 +123,7 @@ router.get("/user/:user_id", async (req, res) => {
 
 router.delete("/", auth, async (req, res) => {
   try {
+    await Post.deleteMany({ user: req.user.id });
     await Profile.findOneAndDelete({ user: req.user.id });
     await User.findOneAndDelete({ _id: req.user.id });
     return res.json({ msg: "User deleted" });
