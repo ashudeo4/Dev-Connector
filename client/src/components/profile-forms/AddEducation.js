@@ -87,7 +87,6 @@ const AddEducation = ({ addEducation, history }) => {
             <input
               type="checkbox"
               name="current"
-              value=""
               value={current}
               onChange={(e) => {
                 setFormData({ ...formData, current: !current });
